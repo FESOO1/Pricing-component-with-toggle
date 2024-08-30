@@ -1,7 +1,9 @@
 const toggleBtn = document.getElementById('toggleBtn');
-const monthlyYearlyTexts = document.querySelector('.plan-yearly-monthly-price');
+const monthlyYearlyTexts = document.querySelectorAll('.plan-yearly-monthly-price');
 
 toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.toggle('toggle-btn-js');
-    monthlyYearlyTexts.classList.toggle('price-container-js');
+    for (const priceText of monthlyYearlyTexts) {
+        priceText.classList.toggle('price-container-js');
+    };
 });

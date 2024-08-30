@@ -109,13 +109,14 @@ body::after {
     justify-content: center;
     align-items: center;
     margin-top: 70px;
+    column-gap: 8px;
 }
 
 .plan {
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.04);
-    padding: 30px;
-    width: 350px;
+    padding-block: 30px;
+    width: 320px;
     background-color: white;
 }
 
@@ -183,6 +184,7 @@ body::after {
     display: flex;
     flex-direction: column;
     row-gap: 12px;
+    padding-inline: 30px;
 }
 
 .plan-includes > h3 {
@@ -197,6 +199,7 @@ body::after {
 }
 
 .learn-more-button-container {
+    padding-inline: 30px;
     margin-top: 30px;
 }
 
@@ -216,4 +219,37 @@ body::after {
     background: transparent;
     color: hsl(237, 63%, 64%);
     border: 1px solid hsl(232, 13%, 33%);
+}
+
+/* SIZING */
+
+.plan-one,
+.plan-three {
+    transform: translateY(35px);
+}
+
+.plan-two {
+    z-index: 1;
+    background: linear-gradient(150deg, hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
+}
+
+.learn-more-button-two {
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+
+.learn-more-button-two:hover {
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+}
+
+.plan-two > .plan-type > h3,
+.plan-two > .plan-yearly-monthly-price > span,
+.plan-two > .plan-includes > h3 {
+    color: white;
+}
+
+.plan-two > .plan-includes > hr {
+    border-top: 1px solid hsl(236, 72%, 79%);
 }
