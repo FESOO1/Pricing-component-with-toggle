@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --f-all: "Montserrat", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--f-all);
+}
+
+body {
+    background-color: hsl(240, 78%, 98%);
+}
+
+.container {
+    padding-block: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-plan {
+}
+
+.pricing-plan-text-and-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+/* PRICING TEXT */
+
+.pricing-plan-text-and-toggle > h1 {
+    color: hsl(233, 13%, 49%);
+}
+
+/* TOGGLE BUTTON */
+
+.toggle {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.toggle > h5 {
+    color: hsl(234, 14%, 74%);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.toggle-button {
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 1rem;
+    background: linear-gradient(45deg,hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
+    display: flex;
+    align-items: center;
+    padding-inline: 3px;
+}
+
+.toggle-button-inner {
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 1rem;
+    transform: translateX(28.5px);
+    transition: transform 300ms;
+}
+
+.toggle-button:hover {
+    background: linear-gradient(45deg,hsl(236, 72%, 79%) ,hsl(236, 72%, 79%));
+}
+
+.toggle-btn-js > .toggle-button-inner {
+    transform: translateX(0);
+}
