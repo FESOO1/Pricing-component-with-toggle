@@ -12,7 +12,29 @@
 }
 
 body {
+    min-height: 100vh;
     background-color: hsl(240, 78%, 98%);
+}
+
+body::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(./images/bg-top.svg) no-repeat;
+    background-position: right top;
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: url(./images/bg-bottom.svg) no-repeat;
+    background-position: left bottom;
+    z-index: -1;
 }
 
 .container {
@@ -78,4 +100,120 @@ body {
 
 .toggle-btn-js > .toggle-button-inner {
     transform: translateX(0);
+}
+
+/* PLANS */
+
+.plans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.plan {
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.04);
+    padding: 30px;
+    width: 350px;
+    background-color: white;
+}
+
+.plan-type {
+    display: flex;
+    justify-content: center;
+}
+
+.plan-type > h3 {
+    color: hsl(233, 13%, 49%);
+}
+
+.plan-yearly-monthly-price {
+    padding-block: 40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.monthly-price {
+    top: 10%;
+    font-size: 4rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    position: absolute;
+    color: hsl(232, 13%, 33%);
+    transition: transform 500ms, opacity 500ms;
+}
+
+.yearly-price {
+    top: 10%;
+    font-size: 4rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    position: absolute;
+    color: hsl(232, 13%, 33%);
+    transform: translateY(70px);
+    opacity: 0;
+    transition: transform 500ms, opacity 500ms;
+}
+
+.dollar-symbol {
+    font-size: 2.2rem;
+}
+
+.price-container-js > .monthly-price {
+    transform: translateY(-70px);
+    opacity: 0;
+}
+
+.price-container-js > .yearly-price {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* PLAN INCLUDES */
+
+.plan-includes {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.plan-includes > h3 {
+    color: hsl(233, 13%, 49%);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.plan-divider {
+    border: 0;
+    border-top: 1px solid  hsl(234, 14%, 74%);
+}
+
+.learn-more-button-container {
+    margin-top: 30px;
+}
+
+.learn-more-button {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 0;
+    color: white;
+    background: linear-gradient(45deg, hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
+}
+
+.learn-more-button:hover {
+    background: transparent;
+    color: hsl(237, 63%, 64%);
+    border: 1px solid hsl(232, 13%, 33%);
 }
