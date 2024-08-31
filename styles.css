@@ -12,7 +12,6 @@
 }
 
 body {
-    min-height: 100vh;
     background-color: hsl(240, 78%, 98%);
 }
 
@@ -44,6 +43,7 @@ body::after {
 }
 
 .pricing-plan {
+    width: 100%;
 }
 
 .pricing-plan-text-and-toggle {
@@ -108,8 +108,10 @@ body::after {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 70px;
     column-gap: 8px;
+    padding-inline: 25px;
 }
 
 .plan {
@@ -252,4 +254,45 @@ body::after {
 
 .plan-two > .plan-includes > hr {
     border-top: 1px solid hsl(236, 72%, 79%);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1026px) {
+    .plans {
+        gap: 30px;
+    }
+    .plan-one,
+    .plan-three {
+        transform: translateY(0px);
+    }
+    body::after {
+        background: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .plans {
+        padding-inline: 0;
+    }
+    .plan {
+        width: 88%;
+    }
+}
+
+@media (max-width: 350px) {
+    .plan {
+        padding-block: 20px;
+    }
+    .plan-includes,
+    .learn-more-button-container {
+        padding-inline: 20px;
+    }
+    .monthly-price,
+    .yearly-price {
+        font-size: 3.2rem;
+    }
+    .dollar-symbol {
+        font-size: 2rem;
+    }
 }
